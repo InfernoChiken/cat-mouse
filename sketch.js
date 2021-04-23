@@ -32,8 +32,8 @@ function draw() {
       mouse.y - cat.y < mouse.height / 2 + cat.height / 2 &&    
       cat.y - mouse.y < mouse.height / 2 + cat.height / 2){
           cat.velocityX = 0;
-          cat.changeAnimation("cat2", catImg2);
-          mouse.changeAnimation("mouse2", mouseImg2);
+          cat.changeAnimation("cat2", catImg);
+          mouse.changeAnimation("mouse2", mouseImg);
       }
 
     drawSprites();
@@ -49,5 +49,11 @@ function keyPressed(){
         mouse.addAnimation("mouseTeasing", mouseImg2);
         mouse.changeAnimation("mouseTeasing");
         mouse.frameDelay = 25;
+
+        cat.addAnimation("catWalking", catImg2);
+        cat.changeAnimation("catWalking");
+        cat.frameDelay = 25;
+
+        
 }
 }
